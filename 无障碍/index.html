@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <a id="cniil_wza" href="javascript:;" @click="gg()">无障碍</a>
+</head>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+    <a href="asdf" alt="asdfasdhfkjashdfkjhasdf">测试一个图片的链接</a>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+    <div>链接</div>
+<body>
+    <script src="./assist.js"></script>
+    <!-- <script src="./assista.js"></script> -->
+    <script>
+
+        
+        function gg() {
+            if (this.href != "" && this.href.toLowerCase().indexOf("javascript") == -1 &&
+                this.href.toLowerCase().indexOf(".gov.cn") == -1 &&
+                this.href.toLowerCase().indexOf("http://fuwu.bdpf.org.cn:8080/shefu/serviceLogin") == -1 &&
+                this.href.toLowerCase().indexOf("https://www.smeservice.com:9002/index.html") == -1 &&
+                this.href.toLowerCase().indexOf("http://103.83.44.128:8080/loitPlatForm/a/login") == -1 &&
+                this.href.toLowerCase().indexOf("javascript:preVious") == -1 && this.href.toLowerCase().indexOf(
+                    "javascript:next") ==
+                -1 && this.href.toLowerCase().indexOf("http://bjgy.chinacourt.org/") == -1) {
+
+                document.getElementById('outUrl').innerText = this.href;
+                document.getElementById('hash').click();
+                $(".alert-mengban").fadeIn(200);
+                $(".alert-warning").delay(200).show().animate({
+                    top: "75px"
+                }, 300);
+                $("#closets,.fangqi,.alert-mengban").click(function () {
+                    $(".alert-warning").animate({
+                        top: "-400px"
+                    }, 200).hide(300);
+                    $(".alert-mengban").delay(300).fadeOut(300);
+                });
+                $(".continue").click(function () {
+                    $(".alert-warning").hide(200);
+                    $(".alert-mengban").delay(200).fadeOut(200);
+                })
+
+
+                return false;
+
+            }
+        }
+    </script>
+</body>
+
+</html>
