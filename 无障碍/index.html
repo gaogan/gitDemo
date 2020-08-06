@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <a id="cniil_wza" href="javascript:;" @click="gg()">无障碍</a>
+    <a id="cniil_wza" href="javascript:;">无障碍</a>
+    <!-- <a id="cniil_wza" href="javascript:;" onclick="gg()">无障碍</a> -->
 </head>
     <div>链接</div>
     <div>链接</div>
@@ -22,14 +23,15 @@
     <div>链接</div>
     <div>链接</div>
     <div>链接</div>
-    <div>链接</div>
+    <div @click="simple()">看看是不是</div>
+    <div class="simple">看看是不是2</div>
 <body>
+    <script src="./jquery-1.11.1.min.js"></script>
     <script src="./assist.js"></script>
     <!-- <script src="./assista.js"></script> -->
     <script>
-
         
-        function gg() {
+        $("#cniil_wza").click(function () {
             if (this.href != "" && this.href.toLowerCase().indexOf("javascript") == -1 &&
                 this.href.toLowerCase().indexOf(".gov.cn") == -1 &&
                 this.href.toLowerCase().indexOf("http://fuwu.bdpf.org.cn:8080/shefu/serviceLogin") == -1 &&
@@ -60,7 +62,7 @@
                 return false;
 
             }
-        }
+        })
     </script>
 </body>
 
