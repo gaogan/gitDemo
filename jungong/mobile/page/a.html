@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>a</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="pageA">我是页面a的内容</div>
+        <input type="button" value="改变B" onclick="window.frames[0].document.getElementById('btnOk').style.color='red'">
+        <input type="button" value="改变B" onclick="window.document.getElementById('ifm').contentWindow.document.bgColor='green'">
+        <hr>
+        <iframe id="ifm" name="ifm" src="b.html" frameborder="0" scrolling="auto"></iframe>
+    </div>
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/vue.min.js"></script>
+    <script type="text/javascript">
+    setTimeout(() => {
+        changeB()
+    }, 1000);
+    function changeB(){
+        // $("#ifm").contents().find("#btnOk").click();//测试可用
+        $("#btnOk", document.frames("ifm").document).click();//chrome 不可用
+    }
+    
+    </script>
+</body>
+
+</html>
